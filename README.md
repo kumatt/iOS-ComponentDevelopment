@@ -1,5 +1,12 @@
-# iOS-ComponentDevelopment
-Demo about component development
+# <span id='toc_0'>iOS-ComponentDevelopment</span>
+
+‘Podfile’ header should include:
+
+source 'https://github.com/OComme/iOS-ComponentDevelopment.git'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+use private framework and cocoapods framwork
 
 <ul>
 <li>
@@ -131,7 +138,7 @@ $ pod trunk register 这里写邮箱 '这里起个名字' --description=' 这里
 > `$ pod repo add [Private Repo Name] [GitHub HTTPS clone URL]`
 
 ```
-$ pod repo add MySpecs https://github.com/OComme/iOS-ComponentDevelopment
+$ pod repo add MySpecs https://github.com/OComme/iOS-ComponentDevelopment.git
 ```
 此时如果成功的话进入到~/.cocoapods/repos目录下就可以看到MySpecs这个目录了。至此创建私有Spec Repo完成。
 
