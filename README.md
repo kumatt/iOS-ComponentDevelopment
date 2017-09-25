@@ -2,9 +2,11 @@
 
 ‘Podfile’ header should include:
 
+```
 source 'https://github.com/OComme/iOS-ComponentDevelopment.git'
 
 source 'https://github.com/CocoaPods/Specs.git'
+```
 
 use private framework and cocoapods framwork
 
