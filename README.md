@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
   s.source_files = "WKPrefixHeader/*"
   
   # s.public_header_files = 'WKPrefixHeader/WKPrefixHeader.h'
-  # s.prefix_header_contents = '#import <WKPrefixHeader/WKPrefixHeader.h>'
+  # s.prefix_header_contents = '#import <WKPrefixHeader/DefineHeader.h>','#import <WKPrefixHeader/ImportHeader.h>'
 end
 ```
 ### 5.创建tag，并推送到git,依次执行以下命令：
