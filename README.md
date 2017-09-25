@@ -1,6 +1,21 @@
 # iOS-ComponentDevelopment
 Demo about component development
 
+<ul>
+<li>
+<a href="#toc_0">iOS-ComponentDevelopment</a>
+<ul>
+<li>
+<a href="#toc_1">让开源项目支持CocoaPods</a>
+</li>
+<li>
+<a href="#toc_11">创建私有Spec Repo</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<span id='toc_1'></span>
 ## 让开源项目支持CocoaPods
 
 以[WK-PrefixHeader](https://github.com/OComme/WK-PrefixHeader)为例
@@ -92,6 +107,7 @@ $ pod trunk register 这里写邮箱 '这里起个名字' --description=' 这里
 ```
 执行完成之后，会给你的邮箱里发一封邮件，去邮箱点击链接之后，再重新执行第8步即可！
 
+<span id='toc_11'></span>
 ## 创建私有Spec Repo
 
 先来说第一步，什么是Spec Repo？它是所有的Pods的一个索引，就是一个容器，所有公开的Pods都在这个里面。
@@ -118,3 +134,5 @@ $ pod trunk register 这里写邮箱 '这里起个名字' --description=' 这里
 $ pod repo add MySpecs https://github.com/OComme/iOS-ComponentDevelopment
 ```
 此时如果成功的话进入到~/.cocoapods/repos目录下就可以看到MySpecs这个目录了。至此创建私有Spec Repo完成。
+
+
