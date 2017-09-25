@@ -71,6 +71,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => "https://github.com/OComme/WK-PrefixHeader.git", :tag => "#{s.version}" }
   s.source_files = "WKPrefixHeader/*"
+  
+  # s.public_header_files = 'WKPrefixHeader/WKPrefixHeader.h'
+  # s.prefix_header_contents = '#import <WKPrefixHeader/WKPrefixHeader.h>'
 end
 ```
 ### 5.创建tag，并推送到git,依次执行以下命令：
