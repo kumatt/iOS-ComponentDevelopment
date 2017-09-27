@@ -94,7 +94,6 @@ Pod::Spec.new do |s|
   
   # 依赖关系，该项目所依赖的其他库，如果有多个需要填写多个s.dependency
   # s.dependency 'SomeOtherPod'   
-end</twitter_username>
 end
 ```
 ### 5.创建tag，并推送到git,依次执行以下命令：
