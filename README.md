@@ -6,9 +6,9 @@
 
 ```
     ├── <PrefixHeader>           预编译组件
-    ├── <Router>            中间模块，负责组件间的调度和消息派发。
+    ├── <Router>                 中间模块，负责组件间的调度和消息派发。
 
-    ├── <Merch>               业务组件
+    ├── <Merch>                  业务组件
     ├── <BaseFeature>            基础功能组件
     └── <BaseUI>                 基础UI组件
 ```
