@@ -117,6 +117,20 @@ $ pod spec lint WKPrefixHeader.podspec
 
 ### 7.如果验证不通过，会有详细的ERROR和WARING提示，根据提示依次解决，然后回到第6步重新来一遍。
 
+有时经过多次的校验，缓存的数据影响到验证信息，需要清楚cocoapods缓存 :
+
+查看缓存列表  ：
+
+```
+$ pod cache list
+```
+
+清除缓存列表  ：
+
+```
+$ pod cache clean WKPrefixHeader
+```
+
 注意：在重新开始之前，我们要删除远程库的tag和本地的tag，命令如下：
 ```
 $ git tag -d 0.0.1                   //删除本地tag
