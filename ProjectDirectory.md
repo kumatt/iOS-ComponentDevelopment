@@ -27,7 +27,7 @@ use private framework and cocoapods framwork
 <span id='toc_1'></span>
 ## 让开源项目支持CocoaPods
 
-以[WK-PrefixHeader](https://github.com/OComme/WK-PrefixHeader)为例
+以[WK-PrefixHeader](https://github.com/ZOCafe/WK-PrefixHeader)为例
 
 ### 1. cd到当前目录
 
