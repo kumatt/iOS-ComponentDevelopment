@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   
   # 不指定分支
-  s.source       = { :git => "https://github.com/OComme/WK-PrefixHeader.git", :tag => "#{s.version}" }'
+  s.source       = { :git => "https://github.com/OComme/WK-PrefixHeader.git", :tag => "#{s.version}" }
   # 或指定分支
   # s.source       = { :git => "https://github.com/OComme/WK-PrefixHeader.git", branch: 'master', :tag => "#{s.version}" }
 
