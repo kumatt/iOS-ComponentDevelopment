@@ -147,7 +147,7 @@ $ pod trunk push WKPrefixHeader.podspec          //提交到CocoaPods
 ```
 $ pod repo push WKSpecs WKPrefixHeader.podspec   //提交到私有Specs
 ```
-### 9.如果是第一次提交`CocoaPods`，需要先执行这个命令：
+### 9.如果是第一次提交CocoaPods，需要先执行这个命令：
 ```
 $ pod trunk register 这里写邮箱 '这里起个名字' --description=' 这里写描述'
 ```
