@@ -106,7 +106,7 @@ $ git push --tags
 
 验证基本格式：
 ```
-$ pod spec lint WKPrefixHeader.podspec
+$ pod lib lint WKPrefixHeader.podspec
 ```
 
 验证能否提交上PodSpec目录：
