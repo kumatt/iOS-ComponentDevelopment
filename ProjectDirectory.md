@@ -115,6 +115,12 @@ $ pod lib lint WKPrefixHeader.podspec
 $ pod spec lint WKPrefixHeader.podspec
 ```
 
+如果当前库依赖私有类库，则在验证时需要带上类库所在的 specs的地址
+```
+$ pod lib lint --sources='私有仓库repo地址,https://github.com/CocoaPods/Specs'
+$ pod spec lint --sources='私有仓库repo地址,https://github.com/CocoaPods/Specs'
+```
+
 ### 7.如果验证不通过，会有详细的ERROR和WARING提示，根据提示依次解决，然后回到第6步重新来一遍。
 
 有时经过多次的校验，缓存的数据影响到验证信息，需要清楚cocoapods缓存 :
@@ -146,6 +152,11 @@ $ pod trunk push WKPrefixHeader.podspec          //提交到CocoaPods
 
 ```
 $ pod repo push WKSpecs WKPrefixHeader.podspec   //提交到私有Specs
+```
+
+如果当前库依赖私有类库，则在验证时需要带上类库所在的 specs的地址
+```
+$ pod repo push --sources='私有仓库repo地址,https://github.com/CocoaPods/Specs'
 ```
 ### 9.如果是第一次提交CocoaPods，需要先执行这个命令：
 ```
