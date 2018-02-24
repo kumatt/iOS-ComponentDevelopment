@@ -156,7 +156,7 @@ $ pod repo push WKSpecs WKPrefixHeader.podspec   //提交到私有Specs
 
 如果当前库依赖私有类库，则在验证时需要带上类库所在的 specs的地址
 ```
-$ pod repo push --sources='私有仓库repo地址,https://github.com/CocoaPods/Specs'
+$ pod repo push WKSpecs WKPrefixHeader.podspec --sources='私有仓库repo地址,https://github.com/CocoaPods/Specs'
 ```
 ### 9.如果是第一次提交CocoaPods，需要先执行这个命令：
 ```
