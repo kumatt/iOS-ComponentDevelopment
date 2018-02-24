@@ -60,40 +60,126 @@ Pod::Spec.new do |s|
   s.name         = "WKPrefixHeader"
   s.version      = "0.0.2"
   
-  #简短介绍，下面是详细介绍
+  # 支持的cocoapods的版本
+  # s.cocoapods_version = '>= 0.36'
+  
+  # 简短介绍，下面是详细介绍
   s.summary      = "something about prefix header of WKPrefixHeader."
   # s.description  = <<-DESC
   #                  DESC
 
-  s.homepage     = "https://github.com/OComme/WK-PrefixHeader"
-  s.license      = "MIT"
+  # 相对'podspec'文件位置
+  s.source_files = "WKPrefixHeader/*"
 
+  # 项目主页
+  s.homepage     = "https://github.com/OComme/WK-PrefixHeader"
+  # 作者信息
   s.author             = { "OComme" => "a163913692@icloud.com" }
-  s.platform     = :ios, "8.0"
-  s.requires_arc = true
   
+  # 项目git地址,tag值与spec.verison版本一致
   # 不指定分支
   s.source       = { :git => "https://github.com/OComme/WK-PrefixHeader.git", :tag => "#{s.version}" }
   # 或指定分支
   # s.source       = { :git => "https://github.com/OComme/WK-PrefixHeader.git", branch: 'master', :tag => "#{s.version}" }
-
-  # 相对'podspec'文件位置
-  s.source_files = "WKPrefixHeader/*"
   
-  # 引用头文件
-  # s.public_header_files = 'WKPrefixHeader/WKPrefixHeader.h'
-  # s.prefix_header_contents = '#import <WKPrefixHeader/DefineHeader.h>','#import <WKPrefixHeader/ImportHeader.h>'
+  # 指定为本地地址
+  # podspec :path => '/Documents/PrettyKit/PrettyKit.podspec'
+  
+  # 许可,一般MIT,默认与spec文件在同一目录下
+  s.license      = "MIT"
+  # 指定许可文件
+  # s.license = { :type => 'MIT', :file => 'MIT-LICENSE.txt' }
+  # 指定许可文件的内容
+  # s.license = { :type => 'MIT', :text => <<-LICENSE
+                   Copyright 2012
+                   Permission is granted to...
+                 LICENSE
+               }
+  
+  # 多媒体地址,如果地址是twitter,发布版本会有通知
+  # s.social_media_url = 'https://twitter.com/cocoapods'
+  # s.social_media_url = 'https://groups.google.com/forum/#!forum/cocoapods'
+  
+  # 单个截图
+  # s.screenshot  = 'http://dl.dropbox.com/u/378729/MBProgressHUD/1.png'
+  # 多个截图
+  # spec.screenshots = [ 'http://dl.dropbox.com/u/378729/MBProgressHUD/1.png',
+                     'http://dl.dropbox.com/u/378729/MBProgressHUD/2.png' ]
+ 
+  # 文档说明
+  # s.documentation_url = 'http://www.example.com/docs.html'
+ 
+  # prepare_command,在pod文件下载完毕之后,执行的命令
+  # 单个命令
+  # s.prepare_command = 'ruby build_files.rb'
+  # 多条命令
+  # spec.prepare_command = <<-CMD
+                        sed -i 's/MyNameSpacedHeader/Header/g' ./**/*.h
+                        sed -i 's/MyNameOtherSpacedHeader/OtherHeader/g' ./**/*.h
+                   CMD
+                   
+  # 是否过期
+  # s.deprecated = true
+  
+  # 公有头文件
+  # s.public_header_files = 'Headers/Public/*.h'
+  # 私有头文件
+  # s.private_header_files = 'Headers/Private/*.h'
+  
+  # prefix_header_contents 类似于pch,文件,多个用逗号隔开
+  # s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>'
+  # 也可以这样写:
+  # s.prefix_header_contents = <<-EOS
+    #ifdef __OBJC__
+    #import "SGExtension.h"    //SGExtension包含了所有头文件
+    #endif 
+  # EOS
+  # end
+  
+  # 指定pch文件
+  #s.prefix_header_file = 'iphone/include/prefix.pch'
   
   # 资源文件地址
   # s.resource_bundles = {
   #  'PodTestLibrary' => ['Pod/Assets/*.png']
   # }                                       
 
+  # 自己的或者第三方framework,比qqSDK的TencentOpenAPI.framework
+  # s.vendored_frameworks = 'MyFramework.framework','TheirFramework.framework'
+  # 自己的或者第三方.a文件,比如微信SDK的.a文件
+  # s.vendored_libraries = 'libProj4.a', 'libJavaScriptCore.a'
+  
   # 所需的framework，多个用逗号隔开
   # s.frameworks = 'SystemConfiguration'                  
   
   # 依赖关系，该项目所依赖的其他库，如果有多个需要填写多个s.dependency
   # s.dependency 'SomeOtherPod'   
+  # 指定某个平台的依赖
+  # s.ios.dependency 'SomeOtherPod'
+  
+  # 支持的平台,如果不写默认支持所有平台
+  s.platform = :ios, "8.0"//仅支持ios
+  
+  # 支持多个平台
+  # s.ios.deployment_target = '6.0'
+  # s.osx.deployment_target = '10.8'
+  
+  # 是否是ARC,默认true,如果不是,会自动添加-fno-objc-arc compiler flag
+  s.requires_arc = true
+  # 部分是ARC
+  # s.requires_arc = false
+  # s.requires_arc = 'Classes/Arc'   //该文件夹下是ARC,其它非ARC
+  # s.requires_arc = ['Classes/*ARC.m', 'Classes/ARC.mm']
+
+  # weak_frameworks
+  # 如果在高版本的OS中调用新增的功能，并且在低版本的OS中依然能够运行,那么就要用到weak_frameworks.如果引用的某些类或者接口在低版本中并不支持，对于不支持的接口，可以在运行的时候判断，这样程序不会出错，如果不weak引用，程序在低版本下启动的时候就会崩溃掉
+  # s.weak_framework = 'MessageUI'
+
+  # ibraries 比如libz,sqlite3.0等,多个用逗号分开
+  # s.libraries = 'xml2', 'z'  //z表示libz.tdb,后缀不需要,lib开头的省略lib
+  
+  # compiler_flags
+  # s.compiler_flags = '-DOS_OBJECT_USE_OBJC=0', '-Wno-format'
 end
 ```
 ### 5.创建tag，并推送到git,依次执行以下命令：
@@ -192,4 +278,13 @@ $ pod repo add MySpecs https://github.com/OComme/iOS-ComponentDevelopment.git
 ```
 此时如果成功的话进入到~/.cocoapods/repos目录下就可以看到MySpecs这个目录了。至此创建私有Spec Repo完成。
 
+## 关于文件匹配
 
+- `*`匹配所有文件
+- `c*`匹配以名字C开头的文件
+- `*c`匹配以名字c结尾的文件
+- `*c*`匹配所有名字包含c的文件
+- `**`文件夹以及递归子文件夹
+- `?`任意一个字符(注意是一个字符)
+- `[set]` 匹配多个字符,支持取反
+- `{p,q}` 匹配名字包括p 或者 q的文件
